@@ -1,0 +1,134 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'home/main.css' %}">
+
+    {% if title %}
+        <title>Django Blog - {{ title }}</title>
+    {% else %}
+        <title>CITS</title>
+    {% endif %}
+</head>
+<body>
+    <header class="site-header">
+      <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
+        <div class="container">
+          <a class="navbar-brand mr-4" href="{% url 'home-home1' %}">Logo Here</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarToggle">
+            <div class="navbar-nav mr-auto">
+              <div class="dropdown">
+                <button class="btn btn-sm btn-warning dropdown-toggle" type="button" data-toggle="dropdown">All categories
+                <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Power tools</a></li>
+                  <li><a href="#">Solar</a></li>
+                  <li><a href="#">Material handling</a></li>
+                  <li><a href="#">Safety</a></li>
+                  <li><a href="#">Cleaning</a></li>
+                  <li><a href="#">Plumbing</a></li>
+                  <li><a href="#">Material handling</a></li>
+                  <li><a href="#">Automotive maintenance</a></li>
+                </ul>
+              </div>
+              <input type="text" placeholder=" ">
+              <button class="btn1 btn-sm"><i class="fa fa-search"></i></button>
+            </div>
+            <div class="navbar-nav">
+              <img class="nav-item" src="{% static 'home/media/profile icon.png' %}">
+              <a class="nav-item nav-link" href=#>Sign in</a>
+              <img class="nav-item" src="{% static 'home/media/Location.png' %}">
+              <a class="nav-item nav-link" href="#">Track order</a>
+              <img class="nav-item" src="{% static 'home/media/Cart.png' %}">
+              <a class="nav-item nav-link" href="#">View order</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main role="main" class="container">
+      <div class="row"> 
+        <div class="col-lg-8">
+        </div>
+        <div class="col-md-4">
+          <div class="content-section">
+              <ul class="list-group">
+                <li class="list-group-item"><img src="{% static 'home/media/si-glyph_drill.png' %}">Power tools</li>
+                <li class="list-group-item"><img src="{% static 'home/media/bx_bxs-car.png' %}">Automotive maintenance</li>
+                <li class="list-group-item"><img src="{% static 'home/media/fa-solid_solar-panel.png' %}">Solar</li>
+                <li class="list-group-item"><img src="{% static 'home/media/gridicons_pin.png' %}">office supplies</li>
+                <li class="list-group-item"><img src="{% static 'home/media/box.png' %}">Material handling</li>
+                <li class="list-group-item"><img src="{% static 'home/media/vector-2.png' %}">Cleaning</li>
+                <li class="list-group-item"><img src="{% static 'home/media/vector-1.png' %}">Safety</li>
+                <li class="list-group-item"><img src="{% static 'home/media/tap.png' %}">Plumbing</li>
+                <li class="list-group-item"><img src="{% static 'home/media/screw.png' %}">Fastners</li>
+                <li class="list-group-item"><img src="{% static 'home/media/delivery-box.png' %}">Packaging materials</li>
+                <div class="container">
+                  <button type="button" class="btn btn-danger btn-long" data-toggle="modal" data-target="#mymodal">
+                    see all categories
+                  </button>
+                  <div class="modal" id="mymodal" role="dialog">
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                      <h4 class="modal-title" style="color:red;text-align: center;">All Categories</h4>
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="container">
+                        <div class="row">
+                          <div class="col-md-4">
+                             <img src="{% static 'home/media/box.png' %}">
+                          </div>
+                            <div class="col-md-4">
+                             <img src="{% static 'home/media/cctv.png' %}">
+                            </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-8">
+                            <img src="{% static 'home/media/couch.png' %}">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </ul>
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+           <img class="image" src="{% static 'home/media/Mask Group 1.png' %}">
+        </div>
+          <div class="col-md-4">
+           <img class="image1" src="{% static 'home/media/Mask Group 2.png' %}">
+          </div>
+      </div>
+      <div class="row">
+        <div class="col-md-8">
+          <img class="image2" src="{% static 'home/media/Mask Group 3.png' %}">
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

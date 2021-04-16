@@ -1,0 +1,1 @@
+web: gunicorn cits.wsgi --log-file -
